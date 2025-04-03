@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: var(--main-font);
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+    list-style: none;
+    font-family: "Bricolage Grotesque", sans-serif;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+:root {
+    --tg-top: calc(var(--tg-safe-area-inset-top) + 45px);
+    --tg-bottom: max(16px, var(--tg-safe-area-inset-bottom));
+
+    --tg-viewport-fullscreen-height: 100vh;
+
+    --color-yellow: #fcd800;
+    --bg-color: #0f0f0f;
+    --color-card-bg: rgba(21, 21, 21, 1);
+}
+
+body {
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(15, 15, 15, 0.95) 0%, #0f0f0f 41.5%);
+}
+
+button {
+    background: transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: black;
+}
+
+.router {
+    z-index: 1;
+    position: relative;
+}
+
+.page-title-block {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.gr-title {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 24px;
+
+    background: linear-gradient(180deg, #fffff0 0%, #999990 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    span {
+        background: none;
+        background-clip: none;
+        -webkit-background-clip: none;
+        -webkit-text-fill-color: none;
+    }
+}
+
+.gr-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+
+    background: linear-gradient(180deg, #fffff0 0%, #999990 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-15 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24px;
+    color: white;
+}

@@ -1,0 +1,203 @@
+.pools {
+    margin-top: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.create {
+    background-color: rgba(252, 216, 0, 1);
+    border-radius: 100px;
+    height: 43px;
+    width: 96px;
+    color: black;
+    font-size: 12px;
+    line-height: 100%;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+}
+
+.tabs {
+    margin-top: 10px;
+    border-radius: 100px;
+    background-color: rgba(21, 21, 21, 1);
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab {
+    border-radius: 100px;
+    width: 100px;
+    font-size: 13px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 240, 1);
+    font-weight: 400;
+    font-size: 12px;
+
+    &Active {
+        @extend .tab;
+        font-size: 13px;
+        font-weight: 700;
+        background-color: var(--color-yellow);
+        color: black;
+    }
+}
+
+.poolCardsList {
+    margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.poolcard {
+    position: relative;
+    background-color: var(--color-card-bg);
+    border-radius: 12px;
+    padding: 12px;
+
+    .topside {
+        display: flex;
+        gap: 14px;
+        border-bottom: 1px solid rgba(217, 217, 217, 0.1);
+        padding-bottom: 18px;
+    }
+
+    .lside {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+        }
+    }
+
+    .cardname {
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    .username {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 11px;
+        color: rgba(204, 204, 189, 1);
+
+        img {
+            width: 18px;
+            border: 1px solid var(--color-yellow);
+            height: 18px;
+
+            border-radius: 100px;
+        }
+    }
+
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 10px;
+
+        p {
+            color: rgba(204, 204, 189, 1);
+            font-size: 12px;
+            font-weight: 400;
+
+            span {
+                color: white;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .details {
+        display: flex;
+        gap: 20px;
+        .type {
+            color: rgba(255, 45, 85, 1);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        p {
+            color: rgba(112, 117, 121, 1);
+            font-size: 12px;
+            line-height: 400;
+            line-height: 20px;
+
+            span {
+                color: rgba(255, 45, 85, 1);
+                font-weight: 700;
+            }
+
+            &:nth-child(3) {
+                span {
+                    color: rgba(49, 209, 88, 1);
+                }
+            }
+        }
+    }
+
+    .bottomside {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 5px;
+        height: 20px;
+    }
+
+    .poolInfo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        p {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+			color: rgba(145, 145, 145, 1);
+			font-size: 12px;
+			font-weight: 400;
+
+			&:nth-child(1) {
+				color: rgba(49, 209, 88, 1); 
+			}
+        }
+    }
+
+    .join {
+        color: var(--color-yellow);
+        font-size: 12px;
+        font-weight: 700;
+    }
+}
+
+.percentage {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 33px;
+    height: 33px;
+}
