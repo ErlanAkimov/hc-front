@@ -21,6 +21,19 @@
         font-weight: 400;
         color: white;
         border-radius: 100px;
+        position: relative;
+
+        span {
+            padding: 2px 4px;
+            background-color: var(--color-yellow);
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 100px;
+            font-size: 9px;
+            font-weight: 500;
+            color: black;
+        }
     }
 
     .activeTab {
@@ -28,6 +41,19 @@
         color: black;
         background-color: var(--color-yellow);
     }
+}
+
+.soon {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg);
+    margin-top: 20px;
+    border-radius: 12px;
+    opacity: 0.8;
+    color: white;
 }
 
 .tabs2 {
@@ -62,42 +88,41 @@
 .points_list {
     display: flex;
     flex-direction: column;
-    gap: 14px;	
+    gap: 14px;
 }
 
 .top3item {
-	box-shadow: 0 0 35px 0px rgba(231, 228, 37, 0.2);
-	border-radius: 12px;
-	padding: 9px 11px;
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	background-color: rgba(21, 21, 21, 1);
+    box-shadow: 0 0 35px 0px rgba(231, 228, 37, 0.2);
+    border-radius: 12px;
+    padding: 9px 11px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(21, 21, 21, 1);
 
-	img {
-		width: 42px;
-		height: 42px;
-		border-radius: 100px;
-	}
+    img {
+        width: 42px;
+        height: 42px;
+        border-radius: 100px;
+    }
 
-	.username {
-		color: rgba(252, 216, 0, 1);
-		font-size: 18px;
-		line-height: 20px;
-		font-weight: 700;
-	}
+    .username {
+        color: rgba(252, 216, 0, 1);
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 700;
+    }
 }
 
 .p_list_item {
-	@extend .top3item;
-	background-color: transparent;
-	box-shadow: none;
-	padding: 9px 0;
+    @extend .top3item;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 9px 0;
 
-	.username {
-		color: white;
-	}
-
+    .username {
+        color: white;
+    }
 }
 
 .pointsValue {
@@ -108,5 +133,3 @@
     text-align: right;
     color: white;
 }
-
-

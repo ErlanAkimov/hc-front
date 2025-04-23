@@ -7,6 +7,8 @@
     padding-top: var(--tg-top);
     padding-bottom: var(--tg-top);
     background-color: #0f0f0f;
+    z-index: 10000;
+    position: relative;
 
     img {
         width: 208px;
@@ -28,6 +30,6 @@
 
 .progress__line {
     height: 100%;
-	transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
     background-color: var(--color-yellow);
 }

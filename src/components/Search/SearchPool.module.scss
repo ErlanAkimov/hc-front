@@ -1,0 +1,87 @@
+.searchPoolWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    border-radius: 16px;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(27, 27, 27, 1);
+    width: 100%;
+    max-width: 328px;
+}
+
+.inputBlock {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(34, 34, 34, 1);
+    padding-inline: 15px;
+    border-radius: 6px;
+    margin-top: 14px;
+    position: relative;
+
+    .clear {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+        svg {
+            aspect-ratio: 1;
+            width: 20px;
+        }
+    }
+
+    input {
+        height: 47px;
+        background: transparent;
+        width: 100%;
+        color: white;
+
+        font-weight: 400;
+        font-size: 15px;
+
+        &::placeholder {
+            font-size: 13px;
+            font-weight: 400;
+            background: linear-gradient(180deg, #fffff0 0%, #999990 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+.searchBtn {
+    background-color: var(--color-yellow);
+    border-radius: 6px;
+    height: 50px;
+    width: 100%;
+    color: black;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 700;
+}

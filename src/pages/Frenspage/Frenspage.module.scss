@@ -1,0 +1,119 @@
+.frenspage {
+    color: white;
+    padding-bottom: 200px;
+    padding-top: var(--tg-top);
+    padding-inline: 16px;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.tabs {
+    margin-top: 10px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(21, 21, 21, 1);
+    padding: 6px;
+
+    .tab {
+        width: 100%;
+        height: 30px;
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+        border-radius: 100px;
+    }
+
+    .activeTab {
+        @extend .tab;
+        color: black;
+        background-color: var(--color-yellow);
+    }
+}
+
+.points {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_value {
+        color: white;
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 800;
+    }
+
+    p {
+        font-weight: 600;
+        line-height: 20px;
+    }
+
+    span {
+        color: var(--color-yellow);
+    }
+}
+
+.steps {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .step {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .circle {
+        background-color: var(--color-yellow);
+        border-radius: 100px;
+        width: 34px;
+        min-width: 34px;
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .text {
+        font-size: 13px;
+        line-height: 14px;
+        color: white;
+        font-weight: 400;
+        padding-right: 30px;
+    }
+
+    .line {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 100%);
+        height: 20px;
+        width: 2px;
+        background-color: var(--color-yellow);
+    }
+}
+
+.inviteBtn {
+    height: 50px;
+    background-color: var(--color-yellow);
+    position: fixed;
+    bottom: var(--bottom-fixed-margin);
+    width: calc(100% - 32px);
+    color: black;
+    max-width: var(--max-app-width);
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.frensList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}

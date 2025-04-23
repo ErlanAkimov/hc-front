@@ -6,8 +6,6 @@
     outline: none;
     box-sizing: border-box;
     user-select: none;
-    font-family: var(--main-font);
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-tap-highlight-color: transparent;
     list-style: none;
     font-family: "Bricolage Grotesque", sans-serif;
@@ -24,8 +22,13 @@
     --tg-viewport-fullscreen-height: 100vh;
 
     --color-yellow: #fcd800;
-    --bg-color: #0f0f0f;
+    --color-green: rgba(49, 209, 88, 1);
+    --bg-color: rgb(15, 15, 15);
     --color-card-bg: rgba(21, 21, 21, 1);
+    --color-bg: rgba(27, 27, 27, 1);
+    --color-red: rgba(255, 45, 85, 1);
+
+    --bottom-fixed-margin: calc(70px + var(--tg-bottom));
 }
 
 body {
@@ -39,6 +42,9 @@ button {
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+    color: black;
 }
 
 input::-webkit-outer-spin-button,
@@ -81,6 +87,7 @@ a {
 }
 
 .gr-subtitle {
+    margin-top: 4px;
     font-size: 14px;
     font-weight: 400;
     line-height: 14px;
@@ -96,4 +103,40 @@ a {
     font-weight: 600;
     line-height: 24px;
     color: white;
+}
+
+.tabs {
+    margin-top: 10px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(21, 21, 21, 1);
+    padding: 6px;
+
+    .tab {
+        width: 100%;
+        height: 36px;
+        font-size: 12px;
+        font-weight: 700;
+        color: white;
+        border-radius: 100px;
+        position: relative;
+    }
+
+    .activeTab {
+        @extend .tab;
+        color: black;
+        background-color: var(--color-yellow);
+    }
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 15, 0.79);
+    z-index: 0;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }

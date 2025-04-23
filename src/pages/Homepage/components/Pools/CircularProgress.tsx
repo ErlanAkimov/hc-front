@@ -1,10 +1,14 @@
-import React from "react";
-import styles from './Pools.module.scss'
+import React, { useEffect, useState } from "react";
+import styles from "./Pools.module.scss";
 
 const CircularProgress: React.FC<{ percentage: number }> = ({ percentage }) => {
     const radius = 50;
     const circumference = 2 * Math.PI * radius;
     const progress = (percentage / 100) * circumference;
+
+    const [p, sp] = useState<number>(0);
+
+    useEffect(() => sp(progress), []);
 
     return (
         <div className={styles.percentage}>
@@ -18,20 +22,24 @@ const CircularProgress: React.FC<{ percentage: number }> = ({ percentage }) => {
                     stroke="rgba(49, 209, 88, 1)"
                     strokeWidth="16"
                     strokeDasharray={circumference}
-                    strokeDashoffset={circumference - progress}
+                    style={{ transition: "1s ease-in-out" }}
+                    strokeDashoffset={circumference - p}
                     strokeLinecap="round"
                     transform="rotate(-90 60 60)"
                 />
             </svg>
-			<p style={{
-				position: 'absolute',
-				top: '50%',
-				left: '50%',
-				transform: "translate(-50%, -50%)",
-				color: 'rgba(49, 209, 88, 1)',
-				fontSize: 10,
-
-			}}>{percentage}</p>
+            <p
+                style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    color: "rgba(49, 209, 88, 1)",
+                    fontSize: 10,
+                }}
+            >
+                {percentage}
+            </p>
         </div>
     );
 };

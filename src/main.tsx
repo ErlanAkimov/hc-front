@@ -4,6 +4,7 @@ import "./global.scss";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import App from "./App";
+import { TonConnectUIProvider } from "@tonconnect/ui-react";
 
 export const wa = window.Telegram.WebApp;
 export const isDesktop = ["tdesktop", "macos"].includes(wa.platform);
@@ -20,9 +21,11 @@ if (!["tdesktop", "macos", "unknown"].includes(wa.platform)) {
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
         <Provider store={store}>
-            <div className="telegram-wrapper">
-                <App />
-            </div>
+            <TonConnectUIProvider manifestUrl="https://hash-cash.io/tonconnect-manifest.json">
+                <div className="telegram-wrapper">
+                    <App />
+                </div>
+            </TonConnectUIProvider>
         </Provider>
     </BrowserRouter>
 );

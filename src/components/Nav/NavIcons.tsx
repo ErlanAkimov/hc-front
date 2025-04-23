@@ -59,7 +59,7 @@ export const navItems = [
     },
     {
         name: "Quest",
-        link: ["/quest"],
+        link: ["/quests"],
         icon: <NavIconQuest />,
     },
     {

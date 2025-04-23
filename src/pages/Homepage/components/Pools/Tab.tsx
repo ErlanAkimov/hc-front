@@ -1,4 +1,4 @@
-import React, { SetStateAction, useState } from "react";
+import React, { SetStateAction } from "react";
 import styles from "./Pools.module.scss";
 
 const tabs = [
@@ -20,29 +20,26 @@ const tabs = [
     },
 ];
 
-const Tabs: React.FC = () => {
-    const [picked, setPicked] = useState<string>(tabs[0].text);
+const Tabs: React.FC<{
+    pickedTab: number;
+    setPickedTab: React.Dispatch<SetStateAction<number>>;
+}> = ({ pickedTab, setPickedTab }) => {
+    const handlePickTab = (index: number) => {
+        setPickedTab(index);
+    };
     return (
         <div className={styles.tabs}>
-            {tabs.map((tab) => (
-                <Tab picked={picked} text={tab.text} setPicked={setPicked} />
+            {tabs.map((tab, index) => (
+                <div
+                    key={index}
+                    onClick={() => handlePickTab(index)}
+                    className={pickedTab === index ? styles.tabActive : styles.tab}
+                >
+                    {tab.text}
+                </div>
             ))}
         </div>
     );
 };
 
 export default Tabs;
-
-interface ITabProps {
-    text: string;
-    picked: string;
-    setPicked: React.Dispatch<SetStateAction<string>>;
-}
-
-function Tab({ text, picked, setPicked }: ITabProps) {
-    return (
-        <div onClick={() => setPicked(text)} className={picked === text ? styles.tabActive : styles.tab}>
-            {text}
-        </div>
-    );
-}

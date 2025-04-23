@@ -1,0 +1,57 @@
+.rates {
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    height: 45px;
+    margin-top: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ratesWrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow-x: scroll;
+
+    padding-inline: 16px;
+
+    display: flex;
+    animation: scroll 80s linear infinite;
+    width: max-content;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.rate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 45px;
+    width: 120px;
+    min-width: 120px;
+}
+
+.subtitle {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.divider {
+    height: 45px;
+    border-radius: 100px;
+    width: 2px;
+    min-width: 2px;
+    background-color: rgba(168, 168, 168, 1);
+}
